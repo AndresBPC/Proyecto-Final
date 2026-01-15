@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Malas Decisiones y sus Consecuencias - Dolores Sucre</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Prevención de peligros en unidades educativas" name="keywords">
+    <meta content="Información sobre prevención de peligros" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Animaciones Personalizadas -->
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes rotateIcon {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Aplicar animaciones a elementos */
+        .section-title {
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .card {
+            animation: fadeInUp 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .card-title {
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            animation: pulse 0.5s ease;
+        }
+
+        .text-primary {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-item {
+            animation: fadeInUp 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-item:hover {
+            transform: scale(1.02);
+        }
+
+        img {
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        p {
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .fas {
+            transition: all 0.3s ease;
+        }
+
+        h4 .fas {
+            animation: fadeInLeft 0.6s ease-out;
+        }
+
+        h4:hover .fas {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-3px);
+        }
+
+        .display-3 {
+            animation: zoomIn 0.8s ease-out;
+        }
+
+        .blog-item {
+            animation: fadeInUp 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .blog-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* Animación en cascada para cards */
+        .col-lg-4:nth-child(1) .card {
+            animation-delay: 0s;
+        }
+
+        .col-lg-4:nth-child(2) .card {
+            animation-delay: 0.2s;
+        }
+
+        .col-lg-4:nth-child(3) .card {
+            animation-delay: 0.4s;
+        }
+
+        .col-lg-4:nth-child(4) .card {
+            animation-delay: 0.6s;
+        }
+
+        .col-lg-4:nth-child(5) .card {
+            animation-delay: 0.8s;
+        }
+
+        .col-lg-4:nth-child(6) .card {
+            animation-delay: 1s;
+        }
+
+        /* Animaciones para el contenedor de bienvenida */
+        .welcome-section {
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        /* Animación suave para las listas */
+        li {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .col-lg-6:nth-child(1) {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .col-lg-6:nth-child(2) {
+            animation: slideInRight 0.8s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href="index.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="fas fa-shield-alt"></i>
+                <span class="text-primary">Dolores Sucre</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Inicio</a>
+                    <a href="que es.html" class="nav-item nav-link active">¿Qué es?</a>
+                    <a href="evitar.html" class="nav-item nav-link">Cómo evitarlo</a>
+                    <a href="cc.html" class="nav-item nav-link">Causas/Consecuencias</a>
+                    <a href="para.html" class="nav-item nav-link">Para quién</a>
+                    <a href="juegos.html" class="nav-item nav-link">Juegos</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <h3 class="display-3 font-weight-bold text-white">Malas Decisiones y sus Consecuencias</h3>
+            <div class="d-inline-flex text-white">
+                <p class="m-0"><a class="text-white" href="index.html">Inicio</a></p>
+                <p class="m-0 px-2">/</p>
+                <p class="m-0">¿Qué es?</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-5 mb-lg-0" src="img/ma.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <p class="section-title pr-5"><span class="pr-2">Comprender</span></p>
+                    <h1 class="mb-4">Malas Decisiones y sus Consecuencias</h1>
+                    <p>Las malas decisiones que toman algunos estudiantes pueden tener graves consecuencias en su vida y en la de otros. Desde daños físicos hasta mentales, incluyendo el bullying, estas acciones generan un impacto negativo en el ambiente escolar.</p>
+                    <p>Es fundamental que comprendas que cada decisión tiene consecuencias. Al educarte sobre estos temas, contribuyes a crear una comunidad escolar más segura, respetuosa y responsable.</p>
+                    <div class="row pt-2 pb-4">
+                        <div class="col-6 col-md-4">
+                            <img class="img-fluid rounded" src="img/bully.jpg" alt="">
+                        </div>
+                        <div class="col-6 col-md-8">
+                            <ul class="list-inline m-0">
+                                <li class="py-2 border-top border-bottom"><i class="fa fa-check text-primary mr-3"></i>Reconocer malas decisiones</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Comprender las consecuencias</li>
+                                <li class="py-2 border-bottom"><i class="fa fa-check text-primary mr-3"></i>Tomar mejores decisiones</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="evitar.html" class="btn btn-primary mt-2 py-2 px-4">Cómo Evitarlo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Facilities Start -->
+    <div class="container-fluid pt-5">
+        <div class="container pb-3">
+            <div class="text-center pb-4">
+                <p class="section-title px-5"><span class="px-2">Áreas de Prevención</span></p>
+                <h1 class="mb-4">Pilares de la Seguridad</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="card border-0 bg-light shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary mb-3"><i class="fas fa-fist-raised mr-2"></i>Bullying y Acoso</h4>
+                            <p class="m-0">Comportamientos abusivos que causan daño emocional grave y consecuencias legales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="card border-0 bg-light shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary mb-3"><i class="fas fa-share-alt-square mr-2"></i>Ciberacoso</h4>
+                            <p class="m-0">Insultos y difusión de contenido privado en redes que pueden arruinar vidas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="card border-0 bg-light shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary mb-3"><i class="fas fa-ban mr-2"></i>Discriminación</h4>
+                            <p class="m-0">Rechazo basado en origen, religión o apariencia que afecta la psiquis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="card border-0 bg-light shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary mb-3"><i class="fas fa-flask mr-2"></i>Consumo de Drogas</h4>
+                            <p class="m-0">Uso de sustancias que daña el cerebro, salud y futuro educativo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="card border-0 bg-light shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary mb-3"><i class="fas fa-exclamation-circle mr-2"></i>Vandalismo y Robos</h4>
+                            <p class="m-0">Actos que generan antecedentes penales que limitan el futuro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="card border-0 bg-light shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <h4 class="text-primary mb-3"><i class="fas fa-heart-broken mr-2"></i>Relaciones Tóxicas</h4>
+                            <p class="m-0">Vínculos abusivos que causan trauma emocional y afectan el desarrollo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities Start -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0" style="font-size: 40px; line-height: 40px;">
+                    <i class="fas fa-shield-alt"></i>
+                    <span class="text-white">Dolores Sucre</span>
+                </a>
+                <p>Unidad Educativa Fiscal Dolores Sucre, comprometida con la prevención de peligros y la seguridad integral de nuestros estudiantes.</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+                        style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Contacto</h3>
+                <div class="d-flex">
+                    <h4 class="fa fa-map-marker-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Dirección</h5>
+                        <p>Dolores Sucre, Ecuador</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-envelope text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Email</h5>
+                        <p>info@doloressucre.edu.ec</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h4 class="fa fa-phone-alt text-primary"></h4>
+                    <div class="pl-3">
+                        <h5 class="text-white">Teléfono</h5>
+                        <p>+593 98 123 4567</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Enlaces Rápidos</h3>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                    <a class="text-white mb-2" href="que es.html"><i class="fa fa-angle-right mr-2"></i>¿Qué es?</a>
+                    <a class="text-white mb-2" href="evitar.html"><i class="fa fa-angle-right mr-2"></i>Cómo evitarlo</a>
+                    <a class="text-white mb-2" href="cc.html"><i class="fa fa-angle-right mr-2"></i>Causas/Consecuencias</a>
+                    <a class="text-white mb-2" href="para.html"><i class="fa fa-angle-right mr-2"></i>Para quién</a>
+                    <a class="text-white" href="juegos.html"><i class="fa fa-angle-right mr-2"></i>Juegos</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h3 class="text-primary mb-4">Boletín</h3>
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control border-0 py-4" placeholder="Tu Nombre" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control border-0 py-4" placeholder="Tu Email"
+                            required="required" />
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-block border-0 py-3" type="submit">Enviar Ahora</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
+            <p class="m-0 text-center text-white">
+                &copy; <a class="text-primary font-weight-bold" href="#">Unidad Educativa Fiscal Dolores Sucre</a>. Todos los Derechos Reservados.
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary p-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Verify Student Name -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const studentName = localStorage.getItem('studentName');
+            if (!studentName) {
+                window.location.href = 'inicio.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

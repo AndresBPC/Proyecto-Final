@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dolores Sucre - Prevención de Peligros</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Prevención de peligros en unidades educativas" name="keywords">
+    <meta content="Prevención de peligros escolares" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .splash-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            flex-direction: column;
+            text-align: center;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .splash-content h1 {
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 0.8s ease-out 0.2s both;
+            letter-spacing: 2px;
+        }
+
+        .splash-content h1:hover {
+            animation: bounce 0.6s ease;
+        }
+
+        .shield-icon {
+            animation: zoomIn 0.8s ease-out 0.1s both;
+            display: inline-block;
+            font-size: 80px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .shield-icon:hover {
+            animation: pulse 0.8s ease infinite;
+        }
+
+        .splash-content p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 50px;
+            animation: slideInLeft 0.8s ease-out 0.3s both;
+        }
+
+        .splash-content form {
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .splash-content input[type="text"] {
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .splash-content input[type="text"]:focus {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            outline: none;
+        }
+
+        .splash-content .btn-enter {
+            padding: 15px 50px;
+            font-size: 1.2rem;
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .splash-content .btn-enter:hover {
+            background-color: #138496;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .splash-content .btn-enter:active {
+            animation: bounce 0.4s ease;
+        }
+
+        .error-message {
+            animation: slideInRight 0.6s ease-out;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .school-icon {
+            font-size: 5rem;
+            color: white;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+    </style>
+
+<body>
+    <div class="splash-container">
+        <div class="splash-content">
+            <i class="fas fa-graduation-cap school-icon"></i>
+            <h1>Unidad Educativa Fiscal</h1>
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Dolores Sucre</h2>
+            <p>Prevención de Peligros en la Unidad Educativa</p>
+            
+            <form id="nameForm" style="margin-top: 30px;">
+                <div style="margin-bottom: 15px;">
+                    <input type="text" id="studentName" placeholder="Ingresa tu nombre" required style="padding: 12px 20px; font-size: 1rem; border: none; border-radius: 5px; width: 250px; text-align: center;">
+                </div>
+                <button type="submit" class="btn-enter" style="margin-top: 15px;">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('studentName').value.trim();
+            
+            if (name === '') {
+                alert('Por favor, ingresa tu nombre para continuar.');
+                return;
+            }
+            
+            // Guardar el nombre en localStorage
+            localStorage.setItem('studentName', name);
+            
+            // Redirigir a index.html
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>
