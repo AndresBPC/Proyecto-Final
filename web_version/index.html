@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Between Shadows & Decissions - BSD v0.1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='50' fill='%2300d4ff' text-anchor='middle' dominant-baseline='central'>⚡</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>⚡ Between Shadows & Decissions</h1>
+            <p class="subtitle">BSD v0.1 - Web Edition</p>
+        </header>
+
+        <!-- Game Container -->
+        <main class="game-container">
+            <!-- Canvas para personajes -->
+            <div class="canvas-container">
+                <canvas id="characterCanvas" width="100%" height="250"></canvas>
+            </div>
+
+            <!-- Diálogo -->
+            <div class="dialog-section">
+                <p class="dialog-label">Diálogo:</p>
+                <div class="dialog-box" id="dialogBox">
+                    Cargando historia...
+                </div>
+                <div class="indicator" id="indicator">▼ Presiona o toca para continuar ▼</div>
+            </div>
+
+            <!-- Opciones -->
+            <div class="options-container" id="optionsContainer">
+                <!-- Las opciones se agregarán aquí dinámicamente -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Between Shadows & Decissions</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
