@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description" content="Between Shadows & Decissions - Novela Interactiva Web. Una historia de acoso, amistad y decisiones morales.">
+    <title>Between Shadows & Decissions - BSD v0.4.5 Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='50' font-size='50' fill='%2300d4ff' text-anchor='middle' dominant-baseline='central'>⚡</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>⚡ Between Shadows & Decissions</h1>
+                <p class="subtitle">BSD v0.4.5 - Web Edition</p>
+            </div>
+        </header>
+
+        <!-- Game Container -->
+        <main class="game-container">
+            <!-- Canvas para personajes/escenas -->
+            <div class="canvas-container">
+                <div id="imageDisplay" class="image-display">
+                    <div class="loading">Cargando...</div>
+                </div>
+            </div>
+
+            <!-- Diálogo -->
+            <div class="dialog-section">
+                <div class="dialog-header">
+                    <p class="dialog-label">Diálogo:</p>
+                    <div class="scene-counter" id="sceneCounter">Escena 0/20</div>
+                </div>
+                <div class="dialog-box" id="dialogBox">
+                    Cargando historia...
+                </div>
+                <div class="indicator" id="indicator">▼ Presiona o toca para continuar ▼</div>
+            </div>
+
+            <!-- Opciones -->
+            <div class="options-container" id="optionsContainer">
+                <!-- Las opciones se agregarán aquí dinámicamente -->
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Between Shadows & Decissions | Desarrollado con ❤️</p>
+            <p class="version-info">v0.4.5 - Web Edition</p>
+        </footer>
+    </div>
+
+    <!-- Modal para nombre del jugador -->
+    <div id="nameModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>¿Cuál es tu nombre?</h2>
+            <input type="text" id="playerName" placeholder="Adrián" maxlength="20" autocomplete="off">
+            <button id="startButton" class="start-button">Comenzar Aventura</button>
+        </div>
+    </div>
+
+    <!-- Scripts cargados primero: datos, luego lógica -->
+    <script src="data.js" defer onload="console.log('✓ data.js cargado')"></script>
+    <script src="game.js" defer onload="console.log('✓ game.js cargado')"></script>
+    
+    <script>
+        // Verificación de carga
+        console.log('HTML cargado inicial');
+        
+        window.addEventListener('load', function() {
+            console.log('=== Verificación final ===');
+            console.log('gameData disponible:', typeof gameData !== 'undefined');
+            if (typeof gameData !== 'undefined') {
+                console.log('✓ Juego cargado. Total escenas:', Object.keys(gameData.escenas || {}).length);
+            } else {
+                console.error('✗ gameData NO está disponible');
+            }
+            console.log('juego disponible:', typeof window.juego !== 'undefined');
+        });
+    </script>
+</body>
+</html>
