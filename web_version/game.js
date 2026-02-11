@@ -349,8 +349,8 @@ class JuegoWeb {
                 
                 img.src = rutaImagen;
                 img.alt = personaje.nombre;
-                img.style.maxHeight = '140px';
-                img.style.maxWidth = '110px';
+                img.style.maxHeight = '160px';
+                img.style.maxWidth = '130px';
                 img.style.objectFit = 'contain';
                 img.style.filter = 'drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5))';
                 
@@ -485,4 +485,5 @@ if (typeof gameData !== 'undefined') {
         }
     }, 10000);
 }
+
 
