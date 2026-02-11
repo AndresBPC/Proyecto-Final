@@ -288,7 +288,7 @@ class JuegoWeb {
             
             if (rutaFondo) {
                 this.imageDisplay.style.backgroundImage = `url('img/${rutaFondo}')`;
-                this.imageDisplay.style.backgroundSize = 'contain';
+                this.imageDisplay.style.backgroundSize = 'cover';
                 this.imageDisplay.style.backgroundPosition = 'center';
                 this.imageDisplay.style.backgroundRepeat = 'no-repeat';
             } else {
@@ -485,3 +485,4 @@ if (typeof gameData !== 'undefined') {
         }
     }, 10000);
 }
+
